@@ -3,9 +3,9 @@
 
   const breedName = process.argv[2];
 
-  const messageHandler = function (error, desc) {
+  const messageHandler = function (error, desc, fullUrl) {
     if (error) {
-      console.log('Error fetch details:', error);
+      console.log(`Error fetch details for: ${fullUrl} \n`, error);
     } 
     if (desc) {
       console.log(desc);
